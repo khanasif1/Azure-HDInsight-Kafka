@@ -11,8 +11,8 @@ namespace kafka_producer_.net
     class Program
     {
         /*
-         * Zookeper: your zookeper details
-           Broker: your cluster broker details
+         * Zookeper: zk0-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:2181,zk3-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:2181
+           Broker: wn0-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:9092,wn1-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:9092
         */
         static void Main(string[] args)
         {
