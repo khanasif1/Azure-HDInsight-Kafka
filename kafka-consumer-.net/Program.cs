@@ -42,7 +42,7 @@ namespace kafka_consumer_.net
                             if (!string.IsNullOrEmpty(msg.Value))
                             {
                                 string message =msg.Value.Replace("Event ", "");
-                                client.DownloadString($"https://kafka-web.azurewebsites.net/api/values/{message}");
+                                client.DownloadString($"kafka-web endpoint");
                             }
                         }
                     }
