@@ -14,7 +14,7 @@ namespace kafka_consumer_.net
         static void Main(string[] args)
         {
             // The Kafka endpoint address
-            string kafkaEndpoint = "wn0-pwc-ka.hadn2mhy1dvunibxjea5kqt21h.px.internal.cloudapp.net:9092,wn1-pwc-ka.hadn2mhy1dvunibxjea5kqt21h.px.internal.cloudapp.net:9092";
+            string kafkaEndpoint = "broker endpoint";
 
             // The Kafka topic we'll be using
             string kafkaTopic = "test";
