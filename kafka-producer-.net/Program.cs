@@ -10,10 +10,7 @@ namespace kafka_producer_.net
 {
     class Program
     {
-        /*
-         * Zookeper: zk0-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:2181,zk3-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:2181
-           Broker: wn0-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:9092,wn1-pwckaf.enddump30h2enc252ekqx2sxqc.px.internal.cloudapp.net:9092
-        */
+        
         static void Main(string[] args)
         {
             // The Kafka endpoint address
@@ -24,9 +21,7 @@ namespace kafka_producer_.net
 
             // Create the producer configuration
             var producerConfig = new Dictionary<string, object> {
-                { "bootstrap.servers", kafkaEndpoint },                
-                //{ "sasl.username", "pwckafka" },
-                //{ "sasl.password", "Redhat0!asif165" },
+                { "bootstrap.servers", kafkaEndpoint }                
             };
 
             // Create the producer
