@@ -28,7 +28,7 @@ namespace kafka_consumer_.net
                 {"auto.offset.reset" ,"earliest" }
             };
 
-            // Create the consumer
+            // Create the consumerdetails
             using (var consumer = new Consumer<Null, string>(consumerConfig, null, new StringDeserializer(Encoding.UTF8)))
             {
                 // Subscribe to the OnMessage event
@@ -52,10 +52,8 @@ namespace kafka_consumer_.net
                         Console.WriteLine($"Error: {ex.Message}");
                     }
                 };
-
                 // Subscribe to the Kafka topic
                 consumer.Subscribe(new List<string>() { kafkaTopic });
-
                 // Handle Cancel Keypress 
                 var cancelled = false;
                 Console.CancelKeyPress += (_, e) =>
@@ -63,9 +61,7 @@ namespace kafka_consumer_.net
                     e.Cancel = true; // prevent the process from terminating.
                     cancelled = true;
                 };
-
                 Console.WriteLine("Ctrl-C to exit.");
-
                 // Poll for messages
                 while (!cancelled)
                 {

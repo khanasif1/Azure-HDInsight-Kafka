@@ -43,9 +43,7 @@ namespace kafka_producer_api.Controllers
 
 
             var producerConfig = new Dictionary<string, object> {
-                { "bootstrap.servers", kafkaEndpoint },                
-                //{ "sasl.username", "pwckafka" },
-                //{ "sasl.password", "Redhat0!asif165" },
+                { "bootstrap.servers", kafkaEndpoint },                               
             };
 
 
