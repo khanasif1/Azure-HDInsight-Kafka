@@ -17,7 +17,8 @@ namespace kafka_producer_.net
             string kafkaEndpoint = ConfigurationManager.AppSettings["broaker"].ToString();
             Console.WriteLine($"Kafka broker {kafkaEndpoint}");
             // The Kafka topic we'll be using
-            string kafkaTopic = "test";
+            string kafkaTopic = //"iottopic";
+                ConfigurationManager.AppSettings["kafkatopic"].ToString(); 
 
             // Create the producer configuration
             var producerConfig = new Dictionary<string, object> {

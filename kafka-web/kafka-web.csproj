@@ -214,7 +214,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="Publish\RoboChimera.azurewebsites.net.PublishSettings" />
+    <None Include="Properties\PublishProfiles\corpkafkweb - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\kafka-web - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\RoboChimera - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\RoboChimera - Web Deploy.pubxml" />

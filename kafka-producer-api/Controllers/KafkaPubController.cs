@@ -16,7 +16,7 @@ namespace kafka_producer_api.Controllers
         // GET: api/KafkaPub
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "MSV1", "value2" };
         }
 
         // POST: api/KafkaPub
@@ -39,11 +39,12 @@ namespace kafka_producer_api.Controllers
             }
             responseMessage = responseMessage + $"Kafka broker {kafkaEndpoint} **** ";
 
-            string kafkaTopic = "test";
+            string kafkaTopic = //"iottopic";
+                                ConfigurationManager.AppSettings["kafkatopic"].ToString();
 
 
             var producerConfig = new Dictionary<string, object> {
-                { "bootstrap.servers", kafkaEndpoint },                               
+                { "bootstrap.servers", kafkaEndpoint },
             };
 
 

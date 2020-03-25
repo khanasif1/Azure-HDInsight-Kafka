@@ -2,6 +2,7 @@
 using Confluent.Kafka.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -14,10 +15,12 @@ namespace kafka_consumer_.net
         static void Main(string[] args)
         {
             // The Kafka endpoint address
-            string kafkaEndpoint = "broker endpoint";
+            string kafkaEndpoint = ConfigurationManager.AppSettings["broaker"].ToString(); 
+            //"wn0-corpka.f3l4t1p4pmae3jfkg24ryvt0xa.px.internal.cloudapp.net:9092,wn1-corpka.f3l4t1p4pmae3jfkg24ryvt0xa.px.internal.cloudapp.net:9092";
 
             // The Kafka topic we'll be using
-            string kafkaTopic = "test";
+            string kafkaTopic = ConfigurationManager.AppSettings["kafkatopic"].ToString();
+            //"iottopic";
 
 
             // Create the consumer configuration
@@ -42,7 +45,8 @@ namespace kafka_consumer_.net
                             if (!string.IsNullOrEmpty(msg.Value))
                             {
                                 string message =msg.Value.Replace("Event ", "");
-                                client.DownloadString($"https://kafka-web.azurewebsites.net/api/values/{message}");
+                                string url= ConfigurationManager.AppSettings["uiurl"].ToString();
+                                client.DownloadString($"{url}/{message}");
                             }
                         }
                     }
