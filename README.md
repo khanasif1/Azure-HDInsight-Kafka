@@ -1,5 +1,5 @@
 # Azure-HDInsight Kafka
-This repository has sample application which has Application Insight  helper class. This is a readymade class which can be included in any .net project to enable Application Insight integration. 
+This repository has sample application which has HD Insight Kafka.
 ![Image description](https://i.ytimg.com/vi/mPONv2Ye5qk/maxresdefault.jpg)
 # What is Apache Kafka in Azure HDInsight
 Apache Kafka is an open-source distributed streaming platform that can be used to build real-time streaming data pipelines and applications. Kafka also provides message broker functionality similar to a message queue, where you can publish and subscribe to named data streams.
